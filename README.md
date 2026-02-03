@@ -27,22 +27,62 @@ Anaconda - Python 3.7
 
 ## Program:
 ``` Python
-### Developed By:
-### Register No:
+### Developed By:HARISHBALA J
+### Register No:212224223002
 
 ## i) Write the frame as JPG file
 
-
+import cv2
+import matplotlib.pyplot as plt
+from IPython.display import clear_output
+import time
+cap = cv2.VideoCapture(0)
+ret, frame = cap.read()
+if ret:
+    cv2.imwrite("harish.jpg", frame)
+cap.release()
+captured_image = cv2.imread('harish.jpg')
+plt.imshow(captured_image[:,:,::-1])
+plt.title('Captured Frame')
+plt.axis('off')
+plt.show()
 
 
 ## ii) Display the video
+cap = cv2.VideoCapture(0)
 
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
+
+cap.release()
 
 
 
 ## iii) Display the video by resizing the window
 
+cap = cv2.VideoCapture(0)
 
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    resized_frame = cv2.resize(frame, (100, 150))  # Resize to 320x240
+    frame_rgb = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
+
+cap.release()
 
 
 ## iv) Rotate and display the video
@@ -50,7 +90,21 @@ Anaconda - Python 3.7
 
 
 
+cap = cv2.VideoCapture(0)
 
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    rotated_frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+    frame_rgb = cv2.cvtColor(rotated_frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
+
+cap.release()
 
 
 
@@ -59,25 +113,24 @@ Anaconda - Python 3.7
 ## Output
 
 ### i) Write the frame as JPG image
-</br>
-</br>
+
+<img width="705" height="512" alt="Screenshot 2026-02-03 105709" src="https://github.com/user-attachments/assets/7666e8b8-5973-44f7-a517-ad0872fa77a6" />
 
 
 ### ii) Display the video
-</br>
-</br>
+<img width="662" height="492" alt="Screenshot 2026-02-03 105715" src="https://github.com/user-attachments/assets/cbdd78c4-4fe5-48cd-ac41-89f10f709eec" />
 
 
 ### iii) Display the video by resizing the window
-</br>
-</br>
 
+
+<img width="364" height="505" alt="Screenshot 2026-02-03 105719" src="https://github.com/user-attachments/assets/7cb1212b-e5f7-4d7b-b878-e5855510e916" />
 
 
 ### iv) Rotate and display the video
-</br>
-</br>
 
+
+<img width="414" height="493" alt="Screenshot 2026-02-03 105724" src="https://github.com/user-attachments/assets/1be868eb-e030-4659-add6-ac78fe338851" />
 
 
 
