@@ -1,4 +1,6 @@
-
+# Image_Acqusition-_using_Web_Camera
+## Name: VINOLIA ALAINA .R
+## Register no:212224240184
 Aim:
  
 To write a python program using OpenCV to capture the image from the web camera and do the following image manipulations.
