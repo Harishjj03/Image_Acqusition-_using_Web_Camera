@@ -29,12 +29,12 @@ Display Video or Image. Use 'imshow' to display the captured video frame or imag
 End Program with 'q'. Allow the program to be terminated by pressing the 'q' key.
 
 ## Program:
-``` Python
+
 ### Developed By:HARISHBALA J
 ### Register No:212224223002
 
 ## i) Write the frame as JPG file
-
+```PYTHON
 import cv2
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
@@ -50,10 +50,10 @@ plt.title('Captured Frame')
 plt.axis('off')
 plt.show()
 
-
+```
 ## ii) Display the video
 cap = cv2.VideoCapture(0)
-
+```
 for i in range(50):
     ret, frame = cap.read()
     if not ret:
@@ -66,11 +66,11 @@ for i in range(50):
     time.sleep(0.05)
 
 cap.release()
-
+```
 
 
 ## iii) Display the video by resizing the window
-
+```
 cap = cv2.VideoCapture(0)
 
 for i in range(50):
@@ -86,12 +86,12 @@ for i in range(50):
     time.sleep(0.05)
 
 cap.release()
-
+```
 
 ## iv) Rotate and display the video
 
 
-
+```
 
 cap = cv2.VideoCapture(0)
 
